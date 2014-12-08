@@ -2,7 +2,9 @@ class Restaurant < ActiveRecord::Base
   has_many :meals
   validates :name, presence: true
   validates :postcode, presence: true
-  validates :telephone_number, presence: true
+  validates :telephone_number, presence: true,
+                               format: { with: /\A\+44\d+\z/,
+                                      message: "must start with +44" }
 
   def announce_meal(description)
     @got_food = "+447903575062"
