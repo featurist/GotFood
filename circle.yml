@@ -1,0 +1,9 @@
+deployment:
+  staging:
+    branch: master
+    heroku:
+      appname: gotfood-stagin
+  production:
+    branch: master
+    heroku:
+      appname: gotfood
