@@ -1,4 +1,3 @@
 class HungryPerson < ActiveRecord::Base
-  def food_available message
-  end
+  validates_presence_of :telephone_number
 end

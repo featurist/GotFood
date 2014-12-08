@@ -1,5 +1,8 @@
 class Restaurant < ActiveRecord::Base
   has_many :meals
+  validates :name, presence: true
+  validates :postcode, presence: true
+  validates :telephone_number, presence: true
 
   def announce_meal(description)
     @got_food = "+447903575062"
