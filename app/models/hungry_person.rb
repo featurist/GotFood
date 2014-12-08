@@ -1,3 +1,5 @@
 class HungryPerson < ActiveRecord::Base
-  validates_presence_of :telephone_number
+  validates :telephone_number, presence: true,
+                                 format: { with: /\A\+44\d+\z/,
+                                        message: "must start with +44" }
 end
