@@ -1,5 +1,5 @@
 Given(/^Mario has 3 Pizzas left over$/) do
-  @mario = Restaurant.create! postcode: 'NW5 1RG', name: 'Marios', telephone_number: "+15005550006"
+  @mario = Restaurant.create! postcode: 'NW5 1RG', name: 'Marios', telephone_number: "+44005550006"
 end
 
 Given(/^Tony is a hungry person$/) do
@@ -32,11 +32,11 @@ When(/^he announces those pizzas$/) do
     "FromCity"=>"",
     "Body"=>"Ggyneth high",
     "FromCountry"=>"GB",
-    "To"=>"+447903575062",
+    "To"=> @got_food,
     "ToZip"=>"",
     "MessageSid"=>"SMc69059d1398b679fc4cb2bba1214c09e",
     "AccountSid"=>account_sid,
-    "From"=>"+15005550006",
+    "From"=> @mario.telephone_number,
     "ApiVersion"=>"2010-04-01"})
 
 end
