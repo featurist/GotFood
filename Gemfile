@@ -39,6 +39,7 @@ gem 'active_skin'
 group :development, :test do
   gem 'pry'
   gem 'sqlite3'
+  gem 'dotenv-rails'
 end
 
 group :test do
